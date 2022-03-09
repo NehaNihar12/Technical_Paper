@@ -4,60 +4,57 @@ ECMAScript, or ES, is a standardized version of JavaScript. The terms ECMAScript
 >
 JavaScript is a scripting language you can use to make web pages interactive. It is one of the core technologies of the web, along with HTML and CSS, and is supported by all modern browsers. 
 >
-Here we will talk about `Data Types` and `In-Built Data Structures`
+Here we will talk about Data Types and In-Built Data Structures
 # Javascript Variables
 In JavaScript, a variable stores the data value that can later vary.
 >
 There are 4 ways to declare a variable
->* var
->* let
->* const
+* var
+* let
+* const
 
 ## let
->* Can Not be redeclared
->
->```
-> let x = true;
->
-> let x = 0;
->
->#SyntaxError: 'x' has already been declared 
->```
->* Block scope
->```
->{
->  let x = 2;
->}
-># x can NOT be used here
->```
+* Can Not be redeclared
+```
+ let x = true;
+ let x = 0;
+#SyntaxError: 'x' has already been declared 
+```
+* Block scope
+```
+{
+  let x = 2;
+}
+# x can NOT be used here
+```
 ## var
->* Can be redeclared
->
->```
-> var x = true;
->
-> var x = 0;
->
->```
->* Global Scope and Function Scope.
->```
->{
->  var x = 2;
->}
->#x CAN be used here
->```
+* Can be redeclared
+
+```
+ var x = true;
+
+ var x = 0;
+
+```
+* Global Scope and Function Scope.
+```
+{
+  var x = 2;
+}
+#x CAN be used here
+```
 ## const
->* Can NOT be redeclared
->* Can NOT be reassigned
->```
->const A = 2;
->A = 6;      # This will give an error
->A = A + 10;   # This will also give an error
->```
->* Must be assigned a value when they are declared:
->```
->const TIME = 2;
->```
+* Can NOT be redeclared
+* Can NOT be reassigned
+```
+const A = 2;
+A = 6;      # This will give an error
+A = A + 10;   # This will also give an error
+```
+* Must be assigned a value when they are declared:
+```
+const TIME = 2;
+```
 
 Difference between var, let and const :
 | Parameter         | var       | let         | const        |
@@ -72,72 +69,72 @@ Difference between var, let and const :
 # Javascript DataTypes
 ## Dynamic Typing
 JavaScript has dynamic types. This means that the same variable can be used to hold different data types.
-> let x; #Now x is undefined
->
-> x = 4.17; #Now x is a Float value
->
-> x = "John"; #Now x is a String
+ let x; #Now x is undefined
+
+ x = 4.17; #Now x is a Float value
+
+ x = "John"; #Now x is a String
 ## Types
 Javascript data type are broadly categorised into 
 * ### Primitive Types
-    * ### Boolean : It has two values `true` and `false`
-    >```
-    >let a = 3
-    >let t = 4
-    >(x===y) #returns false
-    >let a = true
-    >``` 
-    * ### Null : It has exactly one value `null`
-    >```
-    >let a = null
-    >```
-    * ### Undefined : A variable that has not been assigned a value has the value `undefined`.
-    >```
-    >let a;    
-    >#Value is undefined, type is undefined
-    >```
+    * ### Boolean : It has two values true and false
+    ```
+    let a = 3
+    let t = 4
+    (x===y) #returns false
+    let a = true
+    ``` 
+    * ### Null : It has exactly one value null
+    ```
+    let a = null
+    ```
+    * ### Undefined : A variable that has not been assigned a value has the value undefined.
+    ```
+    let a;    
+    #Value is undefined, type is undefined
+    ```
     * ### Number : An integer or floating point number.
-    >```
-    >let x1 = 34.00;     # floating point
-    >let x2 = 34;        # integer
-    >let y = 123e5;      # 12300000 in scientific (exponential) notation
-    >let z = 123e-5;     # 0.00123 in scientific (exponential) notation
-    >```
-    * ### BigInt : BigInt is a numeric data type that can represent integers in the `arbitrary precision format`
-    >```
-    >const aInt = 9007199254740991n
-    >```
-    >```
-    >#It can also be declared as object
-    >
-    >const hugeNo = BigInt(9007199254740991)
-    >#9007199254740991n
-    >
-    >const hString = BigInt("9007199254740991")
-    >#9007199254740991n
-    >
-    >const hHex = BigInt("0xab")
-    >#171n
-    >
-    >const hugeOctal = BigInt("0o377777777777777777") #9007199254740991n
-    >```
+    ```
+    let x1 = 34.00;     # floating point
+    let x2 = 34;        # integer
+    let y = 123e5;      # 12300000 in scientific (exponential) notation
+    let z = 123e-5;     # 0.00123 in scientific (exponential) notation
+    ```
+    * ### BigInt : BigInt is a numeric data type that can represent integers in the arbitrary precision format
+    ```
+    const aInt = 9007199254740991n
+    ```
+    ```
+    #It can also be declared as object
+    
+    const hugeNo = BigInt(9007199254740991)
+    #9007199254740991n
+    
+    const hString = BigInt("9007199254740991")
+    #9007199254740991n
+    
+    const hHex = BigInt("0xab")
+    #171n
+    
+    const hugeOctal = BigInt("0o377777777777777777") #9007199254740991n
+    ```
     * ### String
-    >```
-    >let s = "Hi, Paul."
-    >let t = 'Text 23hg'
-    >```
+    ```
+    let s = "Hi, Paul."
+    let t = 'Text 23hg'
+    ```
     
 * ### Objects : Objects can be seen as a collection of properties. They are useful for storing data in a structured way, and can represent real world objects, like a cat.
-    >```
-    >const cat = {
-    >"name": "Whiskers",
-    >"legs": 4,
-    >"tails": 1,
-    >"enemies": ["Water", "Dogs"]
-    >};
-    >```
-## `typeof` Operator  
-The `typeof` operator is used to find the type of a JavaScript variable. e.g
+    ```
+    const cat = {
+    "name": "Whiskers",
+    "legs": 4,
+    "tails": 1,
+    "enemies": ["Water", "Dogs"]
+    };
+    ```
+## typeof Operator  
+The typeof operator is used to find the type of a JavaScript variable. e.g
 ```
 typeof "John"         #Returns "string"
 typeof 314            #Returns "number"
@@ -152,16 +149,16 @@ const arr = [1, 2.5, "cat"]
 ```
 ### Creating an Array
 * Using an array literal
-> Syntax : const array_name = [item1, item2, ...]; 
->e.g.
->```
->const arr = [1,2,3,4.5,"abc"]
->#or
->const clubs = [];
->clubs[0] = "dance";
->clubs[1] = "music";
->```
-* Using keyword `new`
+Syntax : const array_name = [item1, item2, ...]; 
+e.g.
+```
+const arr = [1,2,3,4.5,"abc"]
+#or
+const clubs = [];
+clubs[0] = "dance";
+clubs[1] = "music";
+```
+* Using keyword new
 ```
 const arr = new Array(1,2,3.4);
 ```
@@ -389,9 +386,9 @@ e.g
 person.lastName;
 person["lastName"];
 ```
-### `this` Keyword
-* In an object method, `this` refers to the object.
-* Alone, `this` refers to the global object.
+### this Keyword
+* In an object method, 'this' refers to the object.
+* Alone, 'this' refers to the global object.
 ### Accessing Object Methods
 You access an object method with the following syntax:
 Syntax : *objectName.methodName()*
